@@ -8,3 +8,11 @@ export function stringItUp(array) {
 
     return newArray;
 }
+
+export function capitalize(array) {
+    const newArray = array.map(item =>
+        item[0].toUpperCase() + item.toLowerCase().slice(1)
+    )
+
+    return newArray;
+}
