@@ -29,3 +29,11 @@ export function alphabetical(arr) {
         return 0;
     })
 }
+
+export function byAge(arr) {
+    return arr.sort((a, b) => {
+        if (a.age < b.age) return -1;
+        if (a.age > b.age) return 1;
+        return 0
+    })
+}
