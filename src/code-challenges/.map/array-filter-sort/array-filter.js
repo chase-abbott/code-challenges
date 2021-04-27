@@ -5,3 +5,9 @@ export function evensOnly(arr) {
 export function fiveAndGreaterOnly(arr) {
     return arr.filter(num => num > 5)
 }
+
+export function fiveCharactersOrFewer(arr) {
+    return arr.filter(word => {
+        if (word.length <= 5) return word
+    })
+}
