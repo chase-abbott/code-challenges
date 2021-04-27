@@ -1,4 +1,4 @@
-import { doubleNumbers, stringItUp, capitalize, namesOnly } from './map.js';
+import { doubleNumbers, stringItUp, capitalize, namesOnly, ageCheck } from './map.js';
 
 test('doubles numbers', () => {
     const input = [2, 5, 100]; // arrange
@@ -12,13 +12,13 @@ test('strings up numbers', () => {
     expect(output).toEqual(["2", "5", "100"]); // assert
 });
 
-test('names only', () => {
+test('capitalizes first letter', () => {
     const input = ["john", "JACOB", "jinGleHeimer", "schmidt"]; // arrange
     const output = capitalize(input); // act
     expect(output).toEqual(["John", "Jacob", "Jingleheimer", "Schmidt"]); // assert
 });
 
-test('capitalizes first letter', () => {
+test('names only', () => {
     const input = [
         {
             name: "Angelina Jolie",
@@ -50,3 +50,4 @@ test('capitalizes first letter', () => {
         "Bob Ziroll"
     ]); // assert
 });
+

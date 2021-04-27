@@ -19,3 +19,4 @@ export function capitalize(array) {
 export function namesOnly(arr) {
     return arr.map(obj => obj.name)
 }
+
