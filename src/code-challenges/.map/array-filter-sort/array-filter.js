@@ -11,3 +11,9 @@ export function fiveCharactersOrFewer(arr) {
         if (word.length <= 5) return word
     })
 }
+
+export function peopleWhoBelongToTheIlluminati(arr) {
+    return arr.filter(person => {
+        if (person.member) return person;
+    })
+}
