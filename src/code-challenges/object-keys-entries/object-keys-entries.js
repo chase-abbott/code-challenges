@@ -16,3 +16,8 @@ export function getFilteredKeys(obj){
   const array = Object.keys(obj);
   return array.filter(att => att === 'age');
 }
+
+export function getArrayOfKeysAndValues(obj){
+  const array = Object.entries(obj);
+  return array;
+}
