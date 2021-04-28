@@ -21,3 +21,13 @@ export function getArrayOfKeysAndValues(obj){
   const array = Object.entries(obj);
   return array;
 }
+
+export function sortedArraysByValuesLength(obj){
+  const array = Object.entries(obj);
+  return array.sort((a, b) => {
+    console.log(b[0].length);
+    if (b[0].length > a[0].length) return 1;
+    if (b[0].length < a[0].length) return -1;
+    return 0;
+  });
+}
