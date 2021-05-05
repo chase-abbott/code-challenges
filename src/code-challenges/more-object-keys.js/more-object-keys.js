@@ -23,9 +23,17 @@ export function houseSize(arr){
 export function hasChildrenEntries(arr, character) {
   let statement = false;
   const matching = arr.find(obj => obj.name === character);
-  console.log(matching.children[0]);
+
   if (matching.children[0] !== undefined){
     statement = true;
   }
   return statement;
+}
+
+export function sortByChildren(arr){
+  return arr.sort((a, b) => {
+    if (a.children.length > b.children.length) return 1;
+    if (a.children.length < b.children.length) return -1;
+    return 0;
+  });
 }
