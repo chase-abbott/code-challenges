@@ -58,7 +58,7 @@ test('it updates the numbers', () => {
  //assert
 });
 
-test('it gets the names of the houses', () => {
+test('it counts the number of children', () => {
   const characters = [
     {
       name: 'Eddard',

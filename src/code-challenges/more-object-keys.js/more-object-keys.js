@@ -8,16 +8,23 @@ export function updateNumbers(obj){
   return array.map(arr => arr[0] + ': ' + arr[1]);
 }
 
-// export function houseSize(arr){
-//   const array = arr.array.forEach(element => {
-      
-//   });(element => Object.values(element));
+export function houseSize(arr){
+  let count = 0;
+  arr.forEach(obj => {
+    if (obj.name) count++;
+    if (obj.spouse) count ++;
+    if (obj.children !== []) {
+      count = count + obj.children.length; 
+    }
+  });
+  return count;
+}
 
-//   console.log(array);
-// }
+// export function hasChildrenEntries(arr, character) {
+//   arr.forEach(obj => {
+//     let count = 0;
 
-export function hasChildrenEntries(arr, character) {
-  const children = arr.map(person => person.children);
-  console.log(children);
-  if (character.children === []) return false;
-} 
+//   })
+// } 
+
+// export function
