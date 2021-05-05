@@ -20,11 +20,12 @@ export function houseSize(arr){
   return count;
 }
 
-// export function hasChildrenEntries(arr, character) {
-//   arr.forEach(obj => {
-//     let count = 0;
-
-//   })
-// } 
-
-// export function
+export function hasChildrenEntries(arr, character) {
+  let statement = false;
+  const matching = arr.find(obj => obj.name === character);
+  console.log(matching.children[0]);
+  if (matching.children[0] !== undefined){
+    statement = true;
+  }
+  return statement;
+}
