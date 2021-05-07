@@ -38,3 +38,13 @@ export function listFoods(recipe){
 
   return array;
 }
+
+export function stepActions(recipe){
+  const array = [];
+  recipe.steps.forEach(step => {
+    let stringArray = step.split(' ');
+    array.push(stringArray[0]);
+  });
+
+  return array;
+}
