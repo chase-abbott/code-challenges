@@ -19,3 +19,22 @@ export function wordsToCharList(str){
   }
   return array;
 }
+
+export function listFoods(recipe){
+  const array = [];
+  recipe.ingredients.forEach(ingredient => {
+    let string;
+    let stringArray = ingredient.split(' ');
+    let modifiedArray = stringArray.slice(2, 5);
+    modifiedArray.forEach(item => {
+      if (!string){
+        string = item;
+      } else {
+        string = `${string} ${item}`;
+      }
+    });
+    array.push(string);
+  });
+
+  return array;
+}
