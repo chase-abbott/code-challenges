@@ -48,3 +48,12 @@ export function stepActions(recipe){
 
   return array;
 }
+
+export function removeLastCharacters(str, numOfCharacters){
+  if (numOfCharacters > 0) {
+    return str.slice(0, -(numOfCharacters));
+  }
+  if (numOfCharacters < 0) {
+    return str;
+  }
+}
