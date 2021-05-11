@@ -3,3 +3,9 @@ export function toLastNames(people) {
     return `${person.firstName} ${person.lastName}`;
   });
 }
+
+export function addValues(arr){
+  return arr.reduce((accumulator, number) => {
+    return accumulator += number;
+  });
+}
