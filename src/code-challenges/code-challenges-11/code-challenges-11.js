@@ -30,3 +30,11 @@ export function findMax(matrix) {
   });
   return max;
 }
+
+export function totalSum(matrix) {
+  let sum = 0;
+  matrix.forEach(array => {
+    array.forEach(number => sum += number);
+  });
+  return sum;
+}
