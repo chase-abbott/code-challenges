@@ -9,3 +9,9 @@ export function addValues(arr){
     return accumulator += number;
   });
 }
+
+export function purchasePrice(arrOfObj){
+  return arrOfObj.reduce((accumulator, item) => {
+    return accumulator += item.price;
+  }, 0);
+}
