@@ -21,3 +21,10 @@ export function countNumberOfElements(arr){
     return accumulator += 1;
   }, 0);
 }
+
+export function returnNames(arr){
+  return arr.reduce((accumulator, item, index) => {
+    accumulator[index] = item.name;
+    return accumulator;
+  }, []);
+}
