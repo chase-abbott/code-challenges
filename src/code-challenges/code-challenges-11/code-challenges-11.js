@@ -18,4 +18,15 @@ export function returnTen(str){
     
   
 }
-  
+
+export function findMax(matrix) {
+  let max = 0;
+  matrix.forEach(array => {
+    array.find(number => {
+      if (number > max){
+        max = number;
+      }
+    });
+  });
+  return max;
+}
