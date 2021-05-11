@@ -38,3 +38,14 @@ export function totalSum(matrix) {
   });
   return sum;
 }
+
+
+
+export function grandTotal(stores){
+  let array = [];
+  stores.forEach(array => {
+    console.log(array);
+  });
+  return array;
+  
+}
