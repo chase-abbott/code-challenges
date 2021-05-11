@@ -15,3 +15,9 @@ export function purchasePrice(arrOfObj){
     return accumulator += item.price;
   }, 0);
 }
+
+export function countNumberOfElements(arr){
+  return arr.reduce((accumulator, item, index) => {
+    return accumulator += 1;
+  }, 0);
+}

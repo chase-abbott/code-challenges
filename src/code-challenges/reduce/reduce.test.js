@@ -1,4 +1,4 @@
-import { toLastNames, addValues, purchasePrice } from './reduce.js';
+import { toLastNames, addValues, purchasePrice, countNumberOfElements } from './reduce.js';
 
 test('It should return the first and last names', () => {
   expect(toLastNames([{ firstName:'Jane', lastName:'Doe' }, { firstName:'James', lastName:'Bond' }])).toStrictEqual(['Jane Doe', 'James Bond']);
@@ -24,4 +24,50 @@ test('It should add the total value of purchased items', () => {
     }
   ];
   expect(purchasePrice(array)).toBe(350);
+});
+
+test('It should count the number of items in the array', () => {
+  const array = [
+    {
+      item: 'dog',
+      price: 200
+    },
+    {
+      item: 'cat',
+      price: 100
+    },
+    {
+      item: 'bird',
+      price: 50
+    }
+  ];
+  const secondArray = [
+    {
+      item: 'dog',
+      price: 200
+    }
+  ];
+  const thirdArray = [
+    {
+      item: 'dog',
+      price: 200
+    },
+    {
+      item: 'cat',
+      price: 100
+    },
+    {
+      item: 'bird',
+      price: 50
+    },
+    {
+
+    },
+    {
+        
+    }
+  ];
+  expect(countNumberOfElements(array)).toBe(3);
+  expect(countNumberOfElements(secondArray)).toBe(1);
+  expect(countNumberOfElements(thirdArray)).toBe(5);
 });
