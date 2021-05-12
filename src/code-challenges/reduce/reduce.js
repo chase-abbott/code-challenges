@@ -28,3 +28,11 @@ export function returnNames(arr){
     return accumulator;
   }, []);
 }
+
+export function reverseString(str){
+  const array = str.split('');
+  
+  return array.reduceRight((accumulator, item) => {
+    return accumulator + item;
+  }, '');
+}

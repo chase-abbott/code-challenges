@@ -1,4 +1,4 @@
-import { toLastNames, addValues, purchasePrice, countNumberOfElements, returnNames } from './reduce.js';
+import { toLastNames, addValues, purchasePrice, countNumberOfElements, returnNames, reverseString } from './reduce.js';
 
 test('It should return the first and last names', () => {
   expect(toLastNames([{ firstName:'Jane', lastName:'Doe' }, { firstName:'James', lastName:'Bond' }])).toStrictEqual(['Jane Doe', 'James Bond']);
@@ -124,4 +124,8 @@ test('It should count the number of items in the array', () => {
   }];
   expect(returnNames(starWarsData)).toStrictEqual(['Luke Skywalker', 'C-3PO', 'R2-D2', 'Darth Vader', 'Leia Organa']);
   
+});
+
+test('It should reverse a string', () => {
+  expect(reverseString('Hello')).toBe('olleH');
 });
