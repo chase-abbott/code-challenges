@@ -5,3 +5,9 @@ export function sortByChildren(array) {
         return 0;
     })
 }
+
+export function containsW(str) {
+    let regex = new RegExp('w')
+    return str.match(regex)
+
+}
