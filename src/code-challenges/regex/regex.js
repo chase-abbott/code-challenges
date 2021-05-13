@@ -9,5 +9,12 @@ export function sortByChildren(array) {
 export function containsW(str) {
     let regex = new RegExp('w')
     return str.match(regex)
+}
+
+export const isNum = (input) => {
+    if (input !== NaN) return true;
+    let regex = new RegExp('0-9');
+
+    console.log(input.match(regex))
 
 }

@@ -1,4 +1,4 @@
-import { containsW, sortByChildren } from './regex.js'
+import { containsW, isNum, sortByChildren } from './regex.js'
 
 describe('Testing challenge 1', () => {
     test('It should sort the characters by number of children', () => {
@@ -55,4 +55,12 @@ it('It should find words with the letter w', () => {
     expect(containsW('hello world')).toBeTruthy()
     expect(containsW('Hello World')).toBeFalsy()
     expect(containsW('hello everyone')).toBeFalsy()
+})
+
+it('It should find word or numbers with numbers', () => {
+    expect(isNum(1234567890)).toBeTruthy()
+    expect(isNum('12345')).toBeTruthy()
+    expect(isNum('h3llo w0rld')).toBeTruthy()
+    expect(isNum('hello world')).toBeFalsy()
+    expect(isNum('')).toBeFalsy()
 })
