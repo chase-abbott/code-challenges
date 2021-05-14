@@ -1,4 +1,4 @@
-import { containsW, containsWorld, isNum, sortByChildren } from './regex.js'
+import { containsW, containsWorld, isCapitalized, isNum, sortByChildren } from './regex.js'
 
 describe('Testing challenge 1', () => {
     test('It should sort the characters by number of children', () => {
@@ -69,5 +69,10 @@ it('It should find worlds', () => {
     expect(containsWorld('hello world')).toBeTruthy()
     expect(containsWorld('Hello World')).toBeFalsy()
     expect(containsWorld('hello everyone')).toBeFalsy()
+})
 
+it('It should find capitalized letters', () => {
+    expect(isCapitalized('We only want to Return the Words that begin With a capital Letter')).toEqual(['We', 'Return', 'Words', 'With', 'Letter'])
+    expect(isCapitalized('Given by our hand in the meadow that is called Runnymede, between Windsor and Staines, on the fifteenth day of June in the seventeenth year of our reign (i.e. 1215: the new regnal year began on 28 May).')).toEqual(['Given', 'Runnymede', 'Windsor', 'Staines', 'June', 'May'])
+    expect(isCapitalized('these words are all failures')).toEqual([])
 })

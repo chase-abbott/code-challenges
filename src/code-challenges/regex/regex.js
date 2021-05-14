@@ -20,6 +20,11 @@ export const isNum = (input) => {
 
 export const containsWorld = (input) => {
     let regex = /(?:world)/g
+    return input.match(regex)
+}
+
+export const isCapitalized = (input) => {
+    let regex = /\b[A-Z].*?\b/
 
     return input.match(regex)
 }
