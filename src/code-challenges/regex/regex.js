@@ -14,7 +14,12 @@ export function containsW(str) {
 export const isNum = (input) => {
     if (!isNaN(input) && input !== '') return true;
     let regex = /[0-9]/g
-    console.log(regex)
     return input.match(regex)
 
+}
+
+export const containsWorld = (input) => {
+    let regex = /(?:world)/g
+
+    return input.match(regex)
 }
