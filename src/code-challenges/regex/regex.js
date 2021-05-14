@@ -12,9 +12,9 @@ export function containsW(str) {
 }
 
 export const isNum = (input) => {
-    if (input !== NaN) return true;
-    let regex = new RegExp('0-9');
-
-    console.log(input.match(regex))
+    if (!isNaN(input) && input !== '') return true;
+    let regex = /[0-9]/g
+    console.log(regex)
+    return input.match(regex)
 
 }
