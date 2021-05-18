@@ -1,4 +1,4 @@
-import { sortByChildren, replaceZeros, validatePin, validateWord, hasNumber } from './regex-pt2.js';
+import { sortByChildren, replaceZeros, validatePin, validateWord, hasNumber, validateEmail } from './regex-pt2.js';
 
 describe('Testing challenge 1', () => {
   test('It should sort the characters by number of children', () => {
@@ -71,4 +71,13 @@ test('to determine if a string has one or more letter followed by one or more di
   expect(hasNumber('flossy2')).toBeTruthy();
   expect(hasNumber('12hello')).toBeFalsy();
   expect(hasNumber('f10ssy')).toBeTruthy();
+});
+
+test('To determine if a valid email', () => {
+  expect(validateEmail('cabbott93@gmail.com')).toBeTruthy();
+  expect(validateEmail('ca.bbott93@gmail.com')).toBeTruthy();
+  expect(validateEmail('ca.bbott93@gmail.org')).toBeTruthy();
+  expect(validateEmail('ca.bbott93@gmail.net')).toBeTruthy();
+  expect(validateEmail('cabbott93@gmail.com:3000')).toBeFalsy();
+  expect(validateEmail('cabbott93!@gmail.com:3000')).toBeFalsy();
 });

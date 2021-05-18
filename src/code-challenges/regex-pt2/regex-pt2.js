@@ -25,3 +25,8 @@ export const hasNumber = (string) => {
   const regex = /^[a-zA-Z]+[0-9]+/;
   return string.match(regex);
 };
+
+export const validateEmail = (email) => {
+  const regex = /^.+\d+@{1}[a-z]+((?:.com)|(?:.net)|(?:.org))$/;
+  return email.match(regex);
+};
