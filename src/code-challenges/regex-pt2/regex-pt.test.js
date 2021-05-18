@@ -1,4 +1,4 @@
-import { sortByChildren, replaceZeros, validatePin, validateWord, hasNumber, validateEmail } from './regex-pt2.js';
+import { sortByChildren, replaceZeros, validatePin, validateWord, hasNumber, validateEmail, validatePhoneNumber } from './regex-pt2.js';
 
 describe('Testing challenge 1', () => {
   test('It should sort the characters by number of children', () => {
@@ -79,5 +79,18 @@ test('To determine if a valid email', () => {
   expect(validateEmail('ca.bbott93@gmail.org')).toBeTruthy();
   expect(validateEmail('ca.bbott93@gmail.net')).toBeTruthy();
   expect(validateEmail('cabbott93@gmail.com:3000')).toBeFalsy();
-  expect(validateEmail('cabbott93!@gmail.com:3000')).toBeFalsy();
+  expect(validateEmail('cabbott93!@gmail.com')).toBeFalsy();
+});
+
+test('To determine if a valid phonenumber', () => {
+  expect(validatePhoneNumber('(555) 555-5555')).toBeTruthy();
+  expect(validatePhoneNumber('(555)555 5555')).toBeTruthy();
+  expect(validatePhoneNumber('555 555-5555')).toBeTruthy();
+  expect(validatePhoneNumber('555-5555555')).toBeTruthy();
+  expect(validatePhoneNumber('555-555 5555')).toBeTruthy();
+  expect(validatePhoneNumber('555-555-5555')).toBeTruthy();
+  expect(validatePhoneNumber('555 555 5555')).toBeTruthy();
+  expect(validatePhoneNumber('555555-5555')).toBeTruthy();
+  expect(validatePhoneNumber('5555555555')).toBeTruthy();
+  expect(validatePhoneNumber('(55) 555-5555')).toBeFalsy();
 });

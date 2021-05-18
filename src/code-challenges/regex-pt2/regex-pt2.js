@@ -30,3 +30,8 @@ export const validateEmail = (email) => {
   const regex = /^.+\d+@{1}[a-z]+((?:.com)|(?:.net)|(?:.org))$/;
   return email.match(regex);
 };
+
+export const validatePhoneNumber = (phonenumber) => {
+  const regex = /^\s*[ (]*(\d{3})[- )]*(\d{3})[- ]*(\d{4})\s*$/;
+  return phonenumber.match(regex);
+};
