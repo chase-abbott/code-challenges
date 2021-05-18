@@ -1,4 +1,4 @@
-import { sortByChildren, replaceZeros, validatePin, validateWord } from './regex-pt2.js';
+import { sortByChildren, replaceZeros, validatePin, validateWord, hasNumber } from './regex-pt2.js';
 
 describe('Testing challenge 1', () => {
   test('It should sort the characters by number of children', () => {
@@ -66,4 +66,9 @@ test('It should return true if there is a word between 5 and 10 characters long'
   expect(validateWord('flossy')).toBeTruthy();
   expect(validateWord('humuhumunukunukuapuaa')).toBeFalsy();
   expect(validateWord('hi')).toBeFalsy();
+});
+test('to determine if a string has one or more letter followed by one or more digit.', () => {
+  expect(hasNumber('flossy2')).toBeTruthy();
+  expect(hasNumber('12hello')).toBeFalsy();
+  expect(hasNumber('f10ssy')).toBeTruthy();
 });

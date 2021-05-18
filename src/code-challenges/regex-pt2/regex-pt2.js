@@ -20,3 +20,8 @@ export const validateWord = (word) => {
   const regex = /^[a-zA-Z]{5,10}$/;
   return word.match(regex);
 };
+
+export const hasNumber = (string) => {
+  const regex = /^[a-zA-Z]+[0-9]+/;
+  return string.match(regex);
+};
