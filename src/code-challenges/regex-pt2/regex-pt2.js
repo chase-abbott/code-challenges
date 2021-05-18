@@ -10,3 +10,9 @@ export function replaceZeros(str){
   const regex = /[0]/;
   return str.replace(regex, 'zero');
 }
+
+export const validatePin = (pin) => {
+  const regex = /^\d{4}$/;
+  console.log(pin.match(regex));
+  return pin.match(regex);
+};

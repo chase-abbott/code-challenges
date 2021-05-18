@@ -1,4 +1,4 @@
-import { sortByChildren, replaceZeros } from './regex-pt2.js';
+import { sortByChildren, replaceZeros, validatePin } from './regex-pt2.js';
 
 describe('Testing challenge 1', () => {
   test('It should sort the characters by number of children', () => {
@@ -54,5 +54,10 @@ describe('Testing challenge 1', () => {
 test('It should replace zeros', () => {
   expect(replaceZeros('hello 0')).toStrictEqual('hello zero');
   expect(replaceZeros('hell0')).toStrictEqual('hellzero');
+});
 
+test('It should return true if there is a 4 digit pin', () => {
+  expect(validatePin('1234')).toBeTruthy();
+  expect(validatePin('3456')).toBeTruthy();
+  expect(validatePin('1234123')).toBeFalsy();
 });
