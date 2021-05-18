@@ -1,4 +1,4 @@
-import { containsW, containsWorld, isCapitalized, isNum, sortByChildren } from './regex.js';
+import { sortByChildren } from './regex-pt2.js';
 
 describe('Testing challenge 1', () => {
   test('It should sort the characters by number of children', () => {
@@ -50,25 +50,3 @@ describe('Testing challenge 1', () => {
     expect(sortByChildren(characters)[0].children.length).toStrictEqual(0);
   });
 });
-
-it('It should find words with the letter w', () => {
-  expect(containsW('hello world')).toBeTruthy();
-  expect(containsW('Hello World')).toBeFalsy();
-  expect(containsW('hello everyone')).toBeFalsy();
-});
-
-it('It should find word or numbers with numbers', () => {
-  expect(isNum(1234567890)).toBeTruthy();
-  expect(isNum('12345')).toBeTruthy();
-  expect(isNum('h3llo w0rld')).toBeTruthy();
-  expect(isNum('hello world')).toBeFalsy();
-  expect(isNum('')).toBeFalsy();
-});
-
-it('It should find worlds', () => {
-  expect(containsWorld('hello world')).toBeTruthy();
-  expect(containsWorld('Hello World')).toBeFalsy();
-  expect(containsWorld('hello everyone')).toBeFalsy();
-});
-
-
