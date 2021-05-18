@@ -1,4 +1,4 @@
-import { sortByChildren } from './regex-pt2.js';
+import { sortByChildren, replaceZeros } from './regex-pt2.js';
 
 describe('Testing challenge 1', () => {
   test('It should sort the characters by number of children', () => {
@@ -49,4 +49,10 @@ describe('Testing challenge 1', () => {
     expect(sortByChildren(characters)[0].name).toStrictEqual('Euron');
     expect(sortByChildren(characters)[0].children.length).toStrictEqual(0);
   });
+});
+
+test('It should replace zeros', () => {
+  expect(replaceZeros('hello 0')).toStrictEqual('hello zero');
+  expect(replaceZeros('hell0')).toStrictEqual('hellzero');
+
 });

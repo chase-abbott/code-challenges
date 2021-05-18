@@ -5,3 +5,8 @@ export function sortByChildren(array) {
     return 0;
   });
 }
+
+export function replaceZeros(str){
+  const regex = /[0]/;
+  return str.replace(regex, 'zero');
+}
