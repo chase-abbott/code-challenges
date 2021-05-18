@@ -13,6 +13,10 @@ export function replaceZeros(str){
 
 export const validatePin = (pin) => {
   const regex = /^\d{4}$/;
-  console.log(pin.match(regex));
   return pin.match(regex);
+};
+
+export const validateWord = (word) => {
+  const regex = /^[a-zA-Z]{5,10}$/;
+  return word.match(regex);
 };
